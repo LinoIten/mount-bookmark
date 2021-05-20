@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "UbuntuMono";
+  src: local("UbuntuMono"),
+    url("./fonts/UbuntuMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  src: local("UbuntuMono"),
+    url("./fonts/UbuntuMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'UbuntuMono-Bold';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

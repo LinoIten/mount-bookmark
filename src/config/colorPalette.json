@@ -1,0 +1,9 @@
+{
+    "backroundBox": "rgba(37,42,51,0.98)",
+    "icon": "rgba(252,252,252,1.0)",
+    "accent1": "rgba(242,183,86,1.0)",
+    "text": {
+        "primary": "#FCFCFC",
+        "secondary": "rgba(242,183,86,0.5)"
+    }
+}
