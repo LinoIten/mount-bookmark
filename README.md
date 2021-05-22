@@ -4,11 +4,21 @@ Mount Bookmark is a self-hosted, highly customizable bookmark board that allows 
 
 # Installation :volcano:
 
-First get the sourcecode:
+First clone the sourcecode:
 
-```bash
+```cmd
 git clone https://github.com/LinoIten/mount-bookmark.git
 ```
+
+To run the react project:
+
+```cmd
+npm start
+```
+
+If you want to run it in the background you can use [PM2](https://pm2.keymetrics.io/).
+
+For having it as a "New Tab" page you could use the [New Tab Redirect Extension](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) for Chrome. 
 
 # Customization:scroll:
 
@@ -65,7 +75,7 @@ As the name suggests here you can define all the colors in the app. You can use 
     "videoId": "QOjmvL3e7Lc",
     "autoplay": true,
     "mute": 1,
-    "offSet": { // Offset of the video in the background
+    "offSet": {
         "top": "0px",
         "right": "0px",
         "bottom": "0px",
@@ -78,4 +88,4 @@ As the name suggests here you can define all the colors in the app. You can use 
 
 > **_Note:_**  Currently the only way to use Icons is to use the svg-path
 
-The names of should be fairly self-explanatory!
+The names of each attribute should be fairly self-explanatory!
