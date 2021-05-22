@@ -17,6 +17,10 @@ npm start
 ```
 
 If you want to run it in the background you can use [PM2](https://pm2.keymetrics.io/).
+```cmd
+npm install pm2@latest -g
+pm2 start --name mount-bookmark npm -- start
+```
 
 For having it as a "New Tab" page you could use the [New Tab Redirect Extension](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) for Chrome. 
 
