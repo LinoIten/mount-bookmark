@@ -30,8 +30,8 @@
         "videoId": "QOjmvL3e7Lc",
         "autoplay": true,
         "mute": 1,
-        "offSet": {
-            "top": "-90px",
+        "offSet": { // Offset of the video in the background
+            "top": "0px",
             "right": "0px",
             "bottom": "0px",
             "left": "0px"

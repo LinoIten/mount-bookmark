@@ -1,51 +1,81 @@
-<<<<<<< HEAD
-# crows-nest
-Self-hosted, highly customizable dashboard that allows you to view any YouTube stream/video in the background.
-=======
-# Getting Started with Create React App
+# Mount Bookmark :mount_fuji:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Mount Bookmark is a self-hosted, highly customizable bookmark board that allows you to view any YouTube stream/video in the background. I made it first as a simple project for myself, however after seeing that I wasn't the only one interested in such a tool I decided to make it into my first open-source project.
 
-## Available Scripts
+# Installation :volcano:
 
-In the project directory, you can run:
+First get the sourcecode:
 
-### `npm start`
+```bash
+git clone https://github.com/LinoIten/mount-bookmark.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Customization:scroll:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Under **/src/config** you'll find two json files. 
 
-### `npm test`
+### colorPalette.json
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```json
+{
+  "backroundBox": "rgba(37,42,51,0.98)",
+  "icon": "rgba(252,252,252,1.0)",
+  "accent1": "rgba(242,183,86,1.0)",
+  "text": {
+    "primary": "#FCFCFC",
+    "secondary": "rgba(242,183,86,0.5)"
+  }
+}
+```
 
-### `npm run build`
+As the name suggests here you can define all the colors in the app. You can use both **HEX** and **rgba()**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### settings.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```json
+{
+  "bookmarkCategories": [
+    {
+      "name": "media",
+      "bookmarks": [
+        {
+            "name": "youtube", 
+            "link": "youtube.com", 
+            "svgPath": "M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z"
+        },
+      ]
+    },
+    {
+      "name": "various",
+      "bookmarks": [
+        {
+          "name": "mail", 
+          "link": "mail.startmail.com", 
+          "svgPath": "M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+        },
+        {
+            "name": "digitec", 
+            "link": "digitec.ch", 
+            "svgPath": "M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"
+        },
+      ]
+    }
+  ],
+  "videoSettings": {
+    "videoId": "QOjmvL3e7Lc",
+    "autoplay": true,
+    "mute": 1,
+    "offSet": { // Offset of the video in the background
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+    }
+  },
+  "searchEngine": "https://www.ecosia.org/search?q="
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> **_Note:_**  Currently the only way to use Icons is to use the svg-path
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
->>>>>>> 58217ba (initial commit)
+The names of should be fairly self-explanatory!
