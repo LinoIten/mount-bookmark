@@ -31,7 +31,7 @@
         "autoplay": true,
         "mute": 1,
         "offSet": {
-            "top": "-90px",
+            "top": "0px",
             "right": "0px",
             "bottom": "0px",
             "left": "0px"
