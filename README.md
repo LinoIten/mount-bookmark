@@ -1,6 +1,6 @@
 # Mount Bookmark :mount_fuji:
 
-Mount Bookmark is a self-hosted, highly customizable bookmark board that allows you to view any YouTube stream/video in the background. I made it first as a simple project for myself, however after seeing that I wasn't the only one interested in such a tool I decided to make it into my first open-source project.
+Mount Bookmark is a self-hosted, highly customizable bookmark board that allows you to view any YouTube stream/video in the background. I made it first as a simple project for myself, however after seeing that I wasn't the only one interested in such a tool I, decided to make it into my first open-source project.
 
 # Installation :volcano:
 
