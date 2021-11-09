@@ -1,13 +1,11 @@
 import BackgroundStream from './components/BackgroundStream';
-import Main from './components/Main';
+import MainCard from './components/MainCard';
 
-function App() {
+export default function App() {
   return (
     <>
       <BackgroundStream />
-      <Main />
+      <MainCard />
     </>
   );
 }
-
-export default App;

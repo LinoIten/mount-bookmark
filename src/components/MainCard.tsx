@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
-import clsx from 'clsx';
-
-import { Card, Grid, InputAdornment, Link, makeStyles, SvgIcon, TextField, Typography } from '@material-ui/core';
+import { Card, Grid, InputAdornment, makeStyles, TextField, Typography } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 
 import colorPalette from '../config/colorPalette.json';
 import settings from '../config/settings.json';
+import Bookmark from './Bookmark';
 
 const useStyles = makeStyles({
   main: {
@@ -19,21 +18,6 @@ const useStyles = makeStyles({
     width: "40%",
     minHeight: "10%",
   },
-  bookmarkName: {
-    fontFamily: "UbuntuMono",
-    letterSpacing: "1.3",
-    textAlign: "left",
-    fontWeight: "bold",
-    color: colorPalette.text.primary,
-  },
-  bookmarkLink: {
-    fontFamily: "UbuntuMono",
-    letterSpacing: "0.8",
-    textAlign: "left",
-    fontWeight: "normal",
-    fontSize: "0.7em",
-    color: colorPalette.text.secondary,
-  },
   bookmarkCategory: {
     fontFamily: "UbuntuMono",
     letterSpacing: "1.3",
@@ -44,9 +28,6 @@ const useStyles = makeStyles({
   },
   icon: {
     color: colorPalette.icon
-  },
-  bookmarkIcon: {
-    marginRight: "10px"
   },
   searchBar: {
     width: "100%",
@@ -66,60 +47,7 @@ const useStyles = makeStyles({
   }
 });
 
-interface IBookmark {
-  icon?: string,
-  name?: string,
-  link?: string
-}
-
-function Bookmark(props: IBookmark) {
-  const classes = useStyles();
-
-  const {
-    icon,
-    name,
-    link
-  } = props
-
-  return (
-    <Grid item xs={3}>
-      <Link href={"http://" + link} style={{textDecoration: "none"}}>
-        <Grid
-          container
-          direction="row"
-          justify="flex-start"
-          alignItems="flex-start"
-        >
-          <Grid item>
-            {icon ? (
-              <SvgIcon fontSize="large" className={clsx(classes.icon, classes.bookmarkIcon)}>
-                <path d={icon} />
-              </SvgIcon>
-            ) : null}
-          </Grid>
-          <Grid item>
-            <Grid 
-              container
-              direction="column"
-              justify="flex-start"
-              alignItems="flex-start"
-            >
-              <Grid item xs={12}>
-                <Typography className={classes.bookmarkName}>{name ? name : ""}</Typography> 
-              </Grid>
-              <Grid item xs={12}>
-                <Typography className={classes.bookmarkLink}>{link ? link : ""}</Typography> 
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Link>
-    </Grid>
-  )
-}
-
-
-function Main() { 
+export default function MainCard() { 
   const classes = useStyles();
 
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -181,5 +109,3 @@ function Main() {
     </Card>
   );
 }
- 
-export default Main;
